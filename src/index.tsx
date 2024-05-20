@@ -50,9 +50,10 @@ const Marquee = ({
             whiteSpace: "nowrap",
             overflow: "hidden",
             position: "absolute",
-            animation: `m${id}slide${offset} ${
-              duration ?? 5000
-            }ms linear infinite`,
+            animationName:`m${id}slide${offset}`,
+            animationDuration:`${duration ?? 5000}ms`,
+            animationTimingFunction:'linear',
+            animationIterationCount:'infinite',
             animationPlayState: animate ?? "running",
             minWidth: "100%",
           }}
